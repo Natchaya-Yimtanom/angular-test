@@ -17,10 +17,4 @@ export class ShippingComponent {
     this.shippingCosts = this.cartService.getShippingPrices();
   }
 
-  prices: Array<{ num: number; name: string }> = [
-    { num: 0, name: 'AA' },
-    { num: 1, name: 'BB' },
-  ];
-
-  selectedLevel = this.prices[0];
 }
