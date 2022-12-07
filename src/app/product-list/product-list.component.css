@@ -1,4 +1,19 @@
+h3{
+  width: 100%;
+  /* background:lightgrey;  */
+  padding: 10px 0; 
+  display:flex;  
+  justify-content: space-between;
+}
 
+#show{
+  font-size:16px; 
+  font-weight: normal;
+}
+
+#show:hover{
+  color: red;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.
