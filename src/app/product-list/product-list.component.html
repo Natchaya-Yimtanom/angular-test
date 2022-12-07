@@ -1,6 +1,6 @@
 <h2>Products</h2>
 <div *ngFor="let product of products; let i = index">
-  <div style="width: 100%; display:flex; border: 1px solid grey">
+  <div class="tab">
     <h3>
       <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
         {{ product.name }}
