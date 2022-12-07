@@ -1,19 +1,20 @@
-.tab {
+.name {
   width: 100%;
   display: flex;
-  border-bottom: 1px solid grey;
 }
 
-.tab:last-child {
-  border-bottom: none;
+.tab{
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
 }
 
 h3 {
   width: 100%;
-  background: lightgrey;
+  /* background: lightgrey; */
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
+  margin: 10px 0 0 !important;
 }
 
 #show {
@@ -23,6 +24,10 @@ h3 {
 
 #show:hover {
   cursor: pointer;
+}
+
+#desc{
+  margin-bottom: 0 !important;
 }
 
 /*

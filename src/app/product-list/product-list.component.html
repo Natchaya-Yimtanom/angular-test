@@ -1,6 +1,6 @@
 <h2>Products</h2>
-<div *ngFor="let product of products; let i = index">
-  <div class="tab">
+<div *ngFor="let product of products; let i = index" class="tab">
+  <div class="name">
     <h3>
       <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
         {{ product.name }}
@@ -12,7 +12,7 @@
   </div>
 
   <div [hidden]="!hideme[i]">
-    <p *ngIf="product.description">
+    <p *ngIf="product.description" id="desc">
       Description: {{ product.description }}
     </p>
 
