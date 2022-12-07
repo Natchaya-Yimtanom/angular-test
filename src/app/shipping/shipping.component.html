@@ -4,3 +4,7 @@
   <span>{{ shipping.type }}</span>
   <span>{{ shipping.price | currency }}</span>
 </div> 
+
+<select type="number" [(ngModel)]="selectedLevel">
+  <option *ngFor="let price of prices" [ngValue]="price">{{price}}</option>
+</select>

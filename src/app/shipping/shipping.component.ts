@@ -16,4 +16,11 @@ export class ShippingComponent {
   ngOnInit(): void {
     this.shippingCosts =  this.cartService.getShippingPrices();
   }
+
+  prices:Array<Object> = [
+      {num: 0, name: "AA"},
+      {num: 1, name: "BB"}
+  ];
+
+  selectedLevel = this.prices[0];
 }
