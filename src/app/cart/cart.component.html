@@ -1,12 +1,8 @@
 <h3>Cart</h3>
 
-<!-- <p>
+<p>
   <a routerLink="/shipping">Shipping Prices</a>
-</p> -->
-
-<select type="number" [(ngModel)]="selectedLevel">
-  <option *ngFor="let price of prices" [ngValue]="price">{{price.name}}</option>
-</select>
+</p>
 
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
