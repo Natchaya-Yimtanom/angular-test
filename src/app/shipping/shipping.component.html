@@ -6,5 +6,5 @@
 </div> 
 
 <select type="number" [(ngModel)]="selectedLevel">
-  <option *ngFor="let price of prices" [ngValue]="price">{{price}}</option>
+  <option *ngFor="let price of prices" [ngValue]="price">{{price.name}}</option>
 </select>

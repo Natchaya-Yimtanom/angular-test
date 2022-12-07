@@ -6,20 +6,20 @@ import { CartService } from '../cart.service';
 @Component({
   selector: 'app-shipping',
   templateUrl: './shipping.component.html',
-  styleUrls: ['./shipping.component.css']
+  styleUrls: ['./shipping.component.css'],
 })
 export class ShippingComponent {
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService) {}
 
-  shippingCosts!: Observable<{ type: string, price: number }[]>;
+  shippingCosts!: Observable<{ type: string; price: number }[]>;
 
   ngOnInit(): void {
-    this.shippingCosts =  this.cartService.getShippingPrices();
+    this.shippingCosts = this.cartService.getShippingPrices();
   }
 
-  prices:Array<Object> = [
-      {num: 0, name: "AA"},
-      {num: 1, name: "BB"}
+  prices: Array<{ num: number; name: string }> = [
+    { num: 0, name: 'AA' },
+    { num: 1, name: 'BB' },
   ];
 
   selectedLevel = this.prices[0];
