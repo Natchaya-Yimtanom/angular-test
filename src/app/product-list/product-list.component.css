@@ -3,31 +3,30 @@
   display: flex;
 }
 
+.name:hover {
+  cursor: pointer;
+}
+
 .tab{
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   border-bottom: 1px solid grey;
 }
 
 h3 {
   width: 100%;
-  /* background: lightgrey; */
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
-  margin: 10px 0 0 !important;
+  margin: 10px 0 !important;
+}
+
+.detail{
+  margin-bottom: 20px;
 }
 
 #show {
   font-size: 16px;
   font-weight: normal;
-}
-
-#show:hover {
-  cursor: pointer;
-}
-
-#desc{
-  margin-bottom: 0 !important;
 }
 
 /*

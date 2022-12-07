@@ -1,18 +1,16 @@
 <h2>Products</h2>
 <div *ngFor="let product of products; let i = index" class="tab">
-  <div class="name">
+  <div class="name" id="show" (click)="hideme[i] = !hideme[i]">
     <h3>
       <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
         {{ product.name }}
       </a>
-      <span id="show" (click)="hideme[i] = !hideme[i]">
-        show
-      </span>
+      <span id="show">{{hideme[i] == true ? 'Hide' : 'Show'}}</span>
     </h3>
   </div>
 
-  <div [hidden]="!hideme[i]">
-    <p *ngIf="product.description" id="desc">
+  <div [hidden]="!hideme[i]" class="detail">
+    <p *ngIf="product.description">
       Description: {{ product.description }}
     </p>
 
