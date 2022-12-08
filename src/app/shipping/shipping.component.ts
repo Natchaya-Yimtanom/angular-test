@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Observable } from 'rxjs';
 import { CartService } from '../cart.service';
@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
   styleUrls: ['./shipping.component.css'],
 })
 export class ShippingComponent {
+  @Input() selectedPrice: string = '';
   constructor(private cartService: CartService) {}
 
   routes: Routes = [{ path: 'cart', redirectTo: '/cart' }];
@@ -24,11 +25,11 @@ export class ShippingComponent {
     { price: 2.99, name: 'Postal' },
   ];
 
-  selectedPrice: string = '';
+  // selectedPrice: string = '';
 
   ngOnInit(): void {
     // this.shippingCosts = this.cartService.getShippingPrices();
-    this.selectedPrice = this.prices[0].name;
+    // this.selectedPrice = this.prices[0].name;
   }
 
   // selectedPrice = '';

@@ -15,11 +15,7 @@
     [(ngModel)]="selectedPrice"
     [ngModelOptions]="{ standalone: true }"
   >
-    <option
-      *ngFor="let price of prices; let i = index"
-      [ngValue]="price"
-      [selected]="i == 0"
-    >
+    <option *ngFor="let price of prices; let i = index" [ngValue]="price">
       {{ price.name }}
     </option>
   </select>
