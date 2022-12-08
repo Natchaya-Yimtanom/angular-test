@@ -5,8 +5,12 @@
   <span>{{ shipping.price | currency }}</span>
 </div>
 
-<select type="number" [(ngModel)]="selectedLevel">
-  <option *ngFor="let price of prices" [ngValue]="price">
-    {{ price.name }}
-  </option>
-</select>
+<form class="form-inline" (ngSubmit)="submit(f)" #f="ngForm">
+  <select type="number" [(ngModel)]="selectedPrice">
+    <option *ngFor="let price of prices" [ngValue]="price">
+      {{ price.name }}
+    </option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
+

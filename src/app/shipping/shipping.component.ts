@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CartService } from '../cart.service';
 
+import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-shipping',
   templateUrl: './shipping.component.html',
@@ -23,6 +25,9 @@ export class ShippingComponent {
     { num: 2.99, name: 'Postal' },
   ];
 
-  selectedLevel = this.prices[0];
+  selectedPrice = '';
 
+  submit(form: NgForm) {
+    const shippings = form.value.selectedPrice;
+  }
 }

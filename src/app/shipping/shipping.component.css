@@ -1,0 +1,24 @@
+select {
+  padding: 15px 25px;
+  width: 75%;
+  font-size: 15px;
+  border: 1px solid grey;
+  border-radius: 2px;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right white;
+  -webkit-appearance: none;
+  background-position-x: 85%;
+}
+
+button{
+  display: block;
+  width: 20%;
+  align-items: right;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.select-con{
+  max-width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
