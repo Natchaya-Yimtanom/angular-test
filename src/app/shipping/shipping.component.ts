@@ -12,7 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
   styleUrls: ['./shipping.component.css'],
 })
 export class ShippingComponent {
-  @Input() selectedPrice: string = '';
+  // @Input() selectedPrice: string = '';
   constructor(private cartService: CartService) {}
 
   routes: Routes = [{ path: 'cart', redirectTo: '/cart' }];
@@ -25,18 +25,15 @@ export class ShippingComponent {
     { price: 2.99, name: 'Postal' },
   ];
 
-  // selectedPrice: string = '';
+  selectedPrice = this.prices[0].name;
 
   ngOnInit(): void {
-    // this.shippingCosts = this.cartService.getShippingPrices();
-    // this.selectedPrice = this.prices[0].name;
-  }
 
-  // selectedPrice = '';
+  }
 
   submit(form: NgForm) {
     const shippings = this.selectedPrice;
     this.cartService.shippingChoice(shippings);
-    window.alert('Successfully chosing shipping');
+    window.alert('Successfully choose shipping');
   }
 }
