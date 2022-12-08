@@ -15,9 +15,11 @@
     [(ngModel)]="selectedPrice"
     [ngModelOptions]="{ standalone: true }"
   >
-    <option *ngFor="let price of prices; let i = index" [ngValue]="price">
+    <option *ngFor="let price of prices; let i = index" [ngValue]="price.name">
       {{ price.name }}
     </option>
   </select>
   <button type="submit">Submit</button>
 </form>
+
+<button (click)="selectedPrice = 'Overnight'">Select Overnight</button>
