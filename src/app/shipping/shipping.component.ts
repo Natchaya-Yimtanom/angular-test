@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { CartService } from '../cart.service';
 
 import { NgForm } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-shipping',
@@ -13,11 +14,9 @@ import { NgForm } from '@angular/forms';
 export class ShippingComponent {
   constructor(private cartService: CartService) {}
 
-  shippingCosts!: Observable<{ type: string; price: number }[]>;
+  routes: Routes = [{ path: 'cart', redirectTo: '/cart' }];
 
-  ngOnInit(): void {
-    this.shippingCosts = this.cartService.getShippingPrices();
-  }
+  shippingCosts!: Observable<{ type: string; price: number }[]>;
 
   prices: Array<{ price: number; name: string }> = [
     { price: 25.99, name: 'Overnight' },
@@ -25,10 +24,18 @@ export class ShippingComponent {
     { price: 2.99, name: 'Postal' },
   ];
 
-  selectedPrice = '';
+  selectedPrice: string = '';
+
+  ngOnInit(): void {
+    // this.shippingCosts = this.cartService.getShippingPrices();
+    this.selectedPrice = this.prices[0].name;
+  }
+
+  // selectedPrice = '';
 
   submit(form: NgForm) {
     const shippings = this.selectedPrice;
     this.cartService.shippingChoice(shippings);
+    window.alert('Successfully chosing shipping');
   }
 }
