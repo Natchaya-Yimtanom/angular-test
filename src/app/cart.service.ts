@@ -17,7 +17,7 @@ export class CartService {
     this.items.push(product);
   }
 
-  shippingChoice(choice: Object) {
+  shippingChoice(choice: String) {
     this.shipping = choice;
   }
 
