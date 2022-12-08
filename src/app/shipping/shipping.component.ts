@@ -33,6 +33,7 @@ export class ShippingComponent {
 
   submit(form: NgForm) {
     const shippings = this.selectedPrice;
+    console.log(shippings);
     this.cartService.shippingChoice(shippings);
     window.alert('Successfully choose shipping');
   }
