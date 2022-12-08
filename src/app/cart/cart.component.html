@@ -1,10 +1,10 @@
 <h3>Cart</h3>
 
 <div>
-  <span *ngIf="shipping != null"
-    >Shipping: {{ shipping.name }} ({{ shipping.price | currency }})</span
-  >
-  <span *ngElse>Shipping: -</span>
+  <span *ngIf="shipping != {}; else elseBlock">
+    Shipping: {{ shipping.name }} ({{ shipping.price | currency }})
+  </span>
+  <ng-template #elseBlock>Shipping: -</ng-template>
 </div>
 <p>
   <a routerLink="/shipping">Shipping Prices</a>
