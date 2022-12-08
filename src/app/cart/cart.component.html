@@ -5,9 +5,7 @@
     Shipping: {{ shipping.name }} ({{ shipping.price | currency }})
   </div>
   <ng-template #elseBlock>Shipping: -</ng-template> -->
-  <div *ngIf="(shipping | keyvalue)?.length; else elseBlock">
-    Shippings: {{ shipping }}
-  </div>
+  <div *ngIf="shipping == ''; else elseBlock">Shippings: {{ shipping }}</div>
   <ng-template #elseBlock>Shipping: -</ng-template>
   <p>
     <a routerLink="/shipping">Shipping Prices</a>
