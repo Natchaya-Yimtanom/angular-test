@@ -5,8 +5,8 @@
   <span>{{ shipping.price | currency }}</span>
 </div>
 
-<form class="form-inline" (ngSubmit)="submit(f)" #f="ngForm">
-  <select type="number" [(ngModel)]="selectedPrice">
+<form class="form-inline select-con" (ngSubmit)="submit(formData)" #formData="ngForm">
+  <select type="number" [(ngModel)]="selectedPrice" [ngModelOptions] = "{standalone:true}">
     <option *ngFor="let price of prices" [ngValue]="price">
       {{ price.name }}
     </option>

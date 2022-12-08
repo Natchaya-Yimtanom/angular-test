@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class CartService {
   items: Product[] = [];
-  shipping: String = '';
+  shipping: any = {};
 
   constructor(
     private http: HttpClient
@@ -17,12 +17,16 @@ export class CartService {
     this.items.push(product);
   }
 
-  shippingChoice(choice: String) {
+  shippingChoice(choice: Object) {
     this.shipping = choice;
   }
 
   getItems() {
     return this.items;
+  }
+
+  getShipping() {
+    return this.shipping;
   }
 
   clearCart() {

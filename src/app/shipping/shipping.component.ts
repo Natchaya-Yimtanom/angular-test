@@ -19,15 +19,16 @@ export class ShippingComponent {
     this.shippingCosts = this.cartService.getShippingPrices();
   }
 
-  prices: Array<{ num: number; name: string }> = [
-    { num: 25.99, name: 'Overnight' },
-    { num: 9.99, name: '2-Day' },
-    { num: 2.99, name: 'Postal' },
+  prices: Array<{ price: number; name: string }> = [
+    { price: 25.99, name: 'Overnight' },
+    { price: 9.99, name: '2-Day' },
+    { price: 2.99, name: 'Postal' },
   ];
 
   selectedPrice = '';
 
   submit(form: NgForm) {
-    const shippings = form.value.selectedPrice;
+    const shippings = this.selectedPrice;
+    this.cartService.shippingChoice(shippings);
   }
 }

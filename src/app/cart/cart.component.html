@@ -1,5 +1,13 @@
 <h3>Cart</h3>
 
+<div>
+  <span *ngIf="shipping"
+    >Shipping: {{ shipping.name }} ({{ shipping.price | currency }})</span
+  >
+  <span *ngIf="!shipping"
+    >Shipping: {{ shipping.name }} ({{ shipping.price | currency }})</span
+  >
+</div>
 <p>
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
@@ -11,19 +19,14 @@
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
   <div>
-    <label for="name">
-      Name
-    </label>
-    <input id="name" type="text" formControlName="name">
+    <label for="name"> Name </label>
+    <input id="name" type="text" formControlName="name" />
   </div>
 
   <div>
-    <label for="address">
-      Address
-    </label>
-    <input id="address" type="text" formControlName="address">
+    <label for="address"> Address </label>
+    <input id="address" type="text" formControlName="address" />
   </div>
-  
-  <button class="button" type="submit">Purchase</button>
 
+  <button class="button" type="submit">Purchase</button>
 </form>
