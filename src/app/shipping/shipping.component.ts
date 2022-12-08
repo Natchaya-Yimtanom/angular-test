@@ -12,7 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
   styleUrls: ['./shipping.component.css'],
 })
 export class ShippingComponent {
-  // @Input() selectedPrice: string = '';
+  @Input() selectedPrice: string = '';
   constructor(private cartService: CartService) {}
 
   routes: Routes = [{ path: 'cart', redirectTo: '/cart' }];
@@ -25,10 +25,10 @@ export class ShippingComponent {
     { price: 2.99, name: 'Postal' },
   ];
 
-  selectedPrice = this.prices[0].name;
+  // selectedPrice = this.prices[0].name;
 
   ngOnInit(): void {
-
+    this.selectedPrice = this.prices[0].name;
   }
 
   submit(form: NgForm) {

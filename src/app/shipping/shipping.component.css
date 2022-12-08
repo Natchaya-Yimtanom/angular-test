@@ -4,7 +4,7 @@ select {
   font-size: 15px;
   border: 1px solid grey;
   border-radius: 2px;
-  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right white;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right transparent;
   -webkit-appearance: none;
   background-position-x: 95%;
 }
