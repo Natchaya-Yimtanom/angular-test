@@ -1,9 +1,9 @@
 <h3>Cart</h3>
 
 <div>
-  <span *ngIf="shipping != {}; else elseBlock">
+  <div *ngIf="(shipping | keyvalue)?.length; else elseBlock">
     Shipping: {{ shipping.name }} ({{ shipping.price | currency }})
-  </span>
+  </div>
   <ng-template #elseBlock>Shipping: -</ng-template>
 </div>
 <p>
